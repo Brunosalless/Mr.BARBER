@@ -1,9 +1,53 @@
 <!DOCTYPE html>
-<html lang="PT-br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-</head>
+    <title>Crie sua Conta</title>
+    </head>
+<body>
+
+    <main class="cadastro-container">
+        
+        <form id="cadastro-form" action="/processar-cadastro" method="POST">
+            
+            <h1>Crie sua Conta</h1>
+            
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="usuario_nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="usuario_email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="senha">Crie uma Senha:</label>
+                <input type="password" id="senha" name="usuario_senha" minlength="8" required>
+                <small>Mínimo de 8 caracteres.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmar-senha">Confirme sua Senha:</label>
+                <input type="password" id="confirmar-senha" name="usuario_senha_confirm" required>
+            </div>
+            
+            <div class="form-group-checkbox">
+                <input type="checkbox" id="termos" name="usuario_termos" required>
+                <label for="termos">Eu li e aceito os <a href="/termos-de-uso">Termos de Uso</a>.</label>
+            </div>
+
+            <button type="submit">Cadastrar</button>
+            
+            <div class="links-extras">
+                <p>Já tem uma conta? <a href="/login">Faça login</a>.</p>
+            </div>
+
+        </form>
+
+    </main>
+
+</body>
 </html>
